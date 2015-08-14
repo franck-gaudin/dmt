@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* Colors */
+/* Background images */
+/* Font family */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * A simple, design-free button object. Extend this object with a `.btn--*` skin
+ * class.
+ */
+.btn {
+  display: inline-block;
+  padding: 0.5em;
+  font-size: 1.25em;
+  font-weight: 600;
+  vertical-align: middle;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
+.btn:hover {
+  cursor: pointer; }
+
+/**
+ * Positive buttons’ skin. Extends `.btn`.
+ */
+.btn--positive {
+  border: 3px solid #ffe18f;
+  background-color: transparent;
+  color: #fff; }
+.btn--positive:hover, .btn--positive:active {
+  background-color: #ffe18f;
+  color: #3e3b4a; }
+
+/**
+ * Negative buttons’ skin. Extends `.btn`.
+ */
+.btn--negative {
+  border: 3px solid #ffe18f;
+  background-color: #ffe18f;
+  color: #3e3b4a; }
+.btn--negative:hover, .btn--negative:active {
+  background-color: transparent;
+  color: #fff; }
+
+h1, h2, h3, h4 {
+  line-height: 1em;
+  margin-top: 0.25em;
+  margin-bottom: 0.5em; }
+
+h1 {
+  font-size: 4.5em;
+  font-weight: 800; }
+
+h2 {
+  font-size: 3em;
+  font-weight: 800; }
+
+h3 {
+  font-size: 2.25em;
+  font-weight: 600; }
+
+h4 {
+  font-size: 2em;
+  font-weight: 300; }
+
+p {
+  font-size: 1.125em;
+  line-height: 1.5em;
+  margin-bottom: 1em; }
+
+.label {
+  font-size: 0.875em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.25em; }
+
+.copyright {
+  font-size: 0.875em;
+  font-weight: 400;
+  opacity: .4; }
+
+/**
+ * A simple, design-free icon object. Extend this object with a `.icon--*` skin
+ * class.
+ */
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-top: 1px;
+  line-height: 32px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.icon--facebook {
+  background-image: url("../images/icons/icon-facebook.png"); }
+
+.icon--twitter {
+  background-image: url("../images/icons/icon-twitter.png"); }
+
+.icon--menu {
+  background-image: url("../images/icons/icon-menu.png"); }
+
+.icon--search {
+  background-image: url("../images/icons/icon-search.png"); }
+
+.container {
+  padding: 2.5em;
+  margin-bottom: 2.5em; }
+
+body {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  background-color: #3e3b4a; }

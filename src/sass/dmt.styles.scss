@@ -1,5 +1,13 @@
 @import "vendor/bourbon/bourbon";
 
-@import "utils/_variables.scss";
-@import "utils/_mixins.scss";
+@import "utils/variables",
+        "utils/mixins",
+        "utils/reset";
 
+@import "components/buttons",
+        "components/typographie",
+        "components/icons";
+
+@import "layout/main";
+
+@import "themes/theme";
