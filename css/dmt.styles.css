@@ -176,7 +176,8 @@ p {
 .search .search--buttonShow [class^="icon-"], .search .search--buttonShow [class*=" icon-"] {
   vertical-align: bottom; }
 .search .search--form {
-  display: none; }
+  display: none;
+  overflow: hidden; }
 .search .search--form::after {
   clear: both;
   content: "";
@@ -188,6 +189,8 @@ p {
   right: 30px;
   z-index: 101; }
 .search .search--input {
+  position: relative;
+  top: -50px;
   width: 100%;
   font-size: 1.3125em;
   font-weight: 300;
@@ -195,7 +198,12 @@ p {
   color: #fff;
   border: 0;
   border-bottom: 1px solid #fff;
-  background: transparent; }
+  background: transparent;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
+.search .search--input.animate {
+  top: 0; }
 .search .icon--search {
   float: right; }
 

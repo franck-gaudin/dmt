@@ -14,13 +14,24 @@
     /* Show Search input*/
     var showSearch = document.getElementById( 'search--buttonShow'),
         searchForm = document.getElementById( 'search--form'),
+        searchInput = document.getElementById( 'search--input'),
         overlay = document.getElementById( 'overlay'),
-        showSearchForm = function(){classie.toggle( searchForm, 'show' );};
+        animateSearchInput = function(){classie.toggle( searchInput, 'animate' );};
 
     showSearch.onclick = function() {
         classie.toggle( body, 'no-scroll' );
         classie.toggle( overlay, 'show' );
-        setTimeout(showSearchForm, 300);
+        classie.toggle( searchForm, 'show' );
+        setTimeout(animateSearchInput, 500);
+    };
+
+    overlay.onclick = function(){
+        if (classie.has( overlay, 'show' )){
+            classie.toggle( body, 'no-scroll' );
+            classie.toggle( overlay, 'show' );
+            classie.toggle( searchForm, 'show' );
+            classie.toggle( searchInput, 'animate' );
+        }
     };
 
 })(jQuery);
