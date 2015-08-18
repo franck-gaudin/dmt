@@ -91,7 +91,7 @@ a:hover {
 h1, h2, h3, h4 {
   line-height: 1em;
   margin-top: 0.25em;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.35em; }
 
 h1 {
   font-size: 4.5em;
@@ -124,6 +124,42 @@ p {
   font-size: 0.875em;
   font-weight: 400;
   opacity: .4; }
+
+input {
+  margin-bottom: 1em;
+  padding: 0.75em 0.5em;
+  box-sizing: border-box;
+  font-size: 1em; }
+
+input[type="email"] {
+  display: block;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  border: 5px solid #fff;
+  background: transparent;
+  opacity: 0.8; }
+
+input[type="button"] {
+  display: block;
+  width: 100%;
+  color: #fff;
+  border: 0;
+  background: #66689c; }
+
+::-webkit-input-placeholder {
+  color: #fff; }
+
+:-moz-placeholder {
+  color: #fff;
+  opacity: 1; }
+
+::-moz-placeholder {
+  color: #fff;
+  opacity: 1; }
+
+:-ms-input-placeholder {
+  color: #fff; }
 
 .menu {
   float: left; }
@@ -282,6 +318,18 @@ main .cameras {
   background: #1ab467; }
 main .newsletter {
   background: #eb7b61; }
+main .newsletter h2:after {
+  content: '...';
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  line-height: 1em;
+  letter-spacing: 0.75em;
+  font-size: 0.29167em; }
+main .newsletter .information {
+  font-size: 0.75em;
+  line-height: 1.5em;
+  font-family: "Open Sans", sans-serif; }
 
 footer {
   padding: 0 30px;
@@ -313,8 +361,20 @@ body.no-scroll {
 *:focus {
   outline: none; }
 
+.center {
+  text-align: center; }
+
 .serif {
   font-family: "Old Standard TT", serif; }
+
+.information {
+  display: block;
+  font-size: 0.875em;
+  padding: 0.35em 0; }
+
+.hidden {
+  display: none;
+  visibility: hidden; }
 
 .overlay {
   position: fixed;
@@ -332,7 +392,3 @@ body.no-scroll {
   opacity: 1;
   z-index: 100;
   background: rgba(62, 59, 74, 0.9); }
-
-.hidden {
-  display: none;
-  visibility: hidden; }

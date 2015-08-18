@@ -22,8 +22,23 @@ body{
   outline: none;
 }
 
+.center{
+  text-align: center;
+}
+
 .serif{
   font-family: $serif;
+}
+
+.information{
+  display: block;
+  font-size: em(14);
+  padding: 0.35em 0;
+}
+
+.hidden{
+  display: none;
+  visibility: hidden;
 }
 
 .overlay{
@@ -44,7 +59,3 @@ body{
   }
 }
 
-.hidden{
-  display: none;
-  visibility: hidden;
-}
