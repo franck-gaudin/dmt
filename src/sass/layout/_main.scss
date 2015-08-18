@@ -2,34 +2,48 @@
   padding: em(20);
   margin-bottom: em(20);
 }
-.container__inner{}
 
 main{
-  padding: 0 10px;
+  padding: 0 20px;
 
   .label{
     color: $label-color;
   }
 
+  .container__inner{
+    position: relative;
+    min-height: 400px;
+
+    .btn{
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
   .home{
-    background: url($article-home-bg) center center no-repeat;
+    background: url($article-home-small-visual) right top no-repeat;
+    background-size: cover;
+
+    p{
+      font-size: em(21);
+    }
+  }
+  .accessories{
+    background: $article-accessories-bg url($article-accessories-visual) 33% top no-repeat;
     background-size: cover;
   }
-  .accesories{
-    background: $article-accessories-bg;
-  }
   .camerasReview{
-    background: url($article-camerasReview-bg) center center no-repeat;
+    background: url($article-camerasReview-visual) center center no-repeat;
     background-size: cover;
   }
   .soundReview{
-    background: url($article-soundReview-bg) center center no-repeat;
+    background: url($article-soundReview-visual) center center no-repeat;
     background-size: cover;
   }
   .cameras{
-    background: $article-cameras-bg;
+    background: $article-cameras-bg url($article-cameras-visual) left top no-repeat;
+    background-size: cover;
   }
-
   .newsletter{
     background: $newsletter-bg;
 

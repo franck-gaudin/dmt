@@ -300,22 +300,32 @@ header .navbar::after {
   margin-bottom: 1.25em; }
 
 main {
-  padding: 0 10px; }
+  padding: 0 20px; }
 main .label {
   color: #ffc7b0; }
+main .container__inner {
+  position: relative;
+  min-height: 400px; }
+main .container__inner .btn {
+  position: absolute;
+  bottom: 0; }
 main .home {
-  background: url("../images/") center center no-repeat;
+  background: url("../images/visuals/home-small.png") right top no-repeat;
   background-size: cover; }
-main .accesories {
-  background: #7abecb; }
+main .home p {
+  font-size: 1.3125em; }
+main .accessories {
+  background: #7abecb url("../images/visuals/accessories.png") 33% top no-repeat;
+  background-size: cover; }
 main .camerasReview {
-  background: url("../images/") center center no-repeat;
+  background: url("../images/visuals/cameras-review.png") center center no-repeat;
   background-size: cover; }
 main .soundReview {
-  background: url("../images/") center center no-repeat;
+  background: url("../images/visuals/sound-review.png") center center no-repeat;
   background-size: cover; }
 main .cameras {
-  background: #1ab467; }
+  background: #1ab467 url("../images/visuals/cameras.png") left top no-repeat;
+  background-size: cover; }
 main .newsletter {
   background: #eb7b61; }
 main .newsletter h2:after {

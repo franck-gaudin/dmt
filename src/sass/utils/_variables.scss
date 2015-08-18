@@ -20,9 +20,15 @@ $newsletter-bg:             #eb7b61;
 $form-btn:                  #66689c;
 
 /* Background images */
-$article-home-bg:           '../images/';
-$article-camerasReview-bg:  '../images/';
-$article-soundReview-bg:    '../images/';
+$article-home-desktop-visual:   '../images/visuals/home-big.png';
+$article-home-medium-visual:    '../images/visuals/home-medium.png';
+$article-home-small-visual:     '../images/visuals/home-small.png';
+$article-accessories-visual:    '../images/visuals/accessories.png';
+$article-cameras-visual:        '../images/visuals/cameras.png';
+$article-camerasReview-visual:  '../images/visuals/cameras-review.png';
+$article-soundReview-visual:    '../images/visuals/sound-review.png';
+
+
 
 /* Font family */
 $sans-serif:                'Open Sans', sans-serif;
