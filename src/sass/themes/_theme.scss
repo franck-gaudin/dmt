@@ -2,6 +2,29 @@
   outline: none;
 }
 
+.serif{
+  font-family: $serif;
+}
+
+.overlay{
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: transparent;
+  z-index: $low-level;
+  @include transition(all .3s ease);
+
+  &.show{
+    opacity: 1;
+    z-index: $hi-level;
+    background: $body-overlay;
+  }
+}
+
+
 body{
   position: relative;
   color: $body-color;
@@ -12,10 +35,6 @@ body{
   left: 0;
   @include transition(all .3s ease);
 
-  .serif{
-    font-family: $serif;
-  }
-
   &.push{
     left: $menu-width;
     overflow-x: hidden;
@@ -24,43 +43,35 @@ body{
   &.no-scroll{
     overflow: hidden;
   }
+}
 
-  .overlay{
-    position: fixed;
-    overflow: hidden;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    background: transparent;
-    z-index: $low-level;
-    @include transition(all .3s ease);
+header{
+  .branding{
+    font-size: em(48);
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
 
-    &.show{
-      opacity: 1;
-      z-index: $hi-level;
-      background: $body-overlay;
+    span{
+      display: block;
+      margin: 0 0.25em;
+      font-size: em(12, 48);
+      font-family: $serif;
+      font-weight: 300;
+      text-transform: none;
+      color: #898691;
     }
   }
-}
-
-.branding{
-  font-size: em(48);
-  font-weight: 700;
-  line-height: 1;
-  text-transform: uppercase;
-
-  span{
-    display: block;
-    margin: 0 0.25em;
-    font-size: em(12, 48);
-    font-family: $serif;
-    font-weight: 300;
-    text-transform: none;
-    color: #898691;
+  .navbar{
+    @include clearfix;
   }
 }
 
-.navbar{
-  @include clearfix;
+main{
+  .label{
+    color: $label-color;
+  }
 }
+
+
+

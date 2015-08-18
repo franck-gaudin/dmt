@@ -114,8 +114,8 @@ p {
   margin-bottom: 1em; }
 
 .label {
-  font-size: 0.875em;
-  font-weight: 800;
+  font-size: 0.8125em;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.25em; }
 
@@ -247,25 +247,10 @@ header .branding {
 *:focus {
   outline: none; }
 
-body {
-  position: relative;
-  color: #fff;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  line-height: 1.5em;
-  background-color: #3e3b4a;
-  left: 0;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
-body .serif {
+.serif {
   font-family: "Old Standard TT", serif; }
-body.push {
-  left: 240px;
-  overflow-x: hidden; }
-body.no-scroll {
-  overflow: hidden; }
-body .overlay {
+
+.overlay {
   position: fixed;
   overflow: hidden;
   top: 0;
@@ -277,17 +262,34 @@ body .overlay {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease; }
-body .overlay.show {
+.overlay.show {
   opacity: 1;
   z-index: 100;
   background: rgba(62, 59, 74, 0.9); }
 
-.branding {
+body {
+  position: relative;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  background-color: #3e3b4a;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+body.push {
+  left: 240px;
+  overflow-x: hidden; }
+body.no-scroll {
+  overflow: hidden; }
+
+header .branding {
   font-size: 3em;
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase; }
-.branding span {
+header .branding span {
   display: block;
   margin: 0 0.25em;
   font-size: 0.25em;
@@ -295,8 +297,10 @@ body .overlay.show {
   font-weight: 300;
   text-transform: none;
   color: #898691; }
-
-.navbar::after {
+header .navbar::after {
   clear: both;
   content: "";
   display: table; }
+
+main .label {
+  color: #ffc7b0; }
