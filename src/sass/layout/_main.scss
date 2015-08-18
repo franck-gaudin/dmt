@@ -3,21 +3,33 @@
   margin-bottom: em(20);
 }
 
+.container__inner{
+  position: relative;
+  min-height: 400px;
+
+  .home &,
+  .accessories &,
+  .cameras &{
+    .btn{
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  .soundReview &,
+  .camerasReview &{
+    @include align-items(flex-start);
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(space-between);
+  }
+}
+
 main{
   padding: 0 20px;
 
   .label{
     color: $label-color;
-  }
-
-  .container__inner{
-    position: relative;
-    min-height: 400px;
-
-    .btn{
-      position: absolute;
-      bottom: 0;
-    }
   }
 
   .home{

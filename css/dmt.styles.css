@@ -299,23 +299,60 @@ header .navbar::after {
   padding: 1.25em;
   margin-bottom: 1.25em; }
 
+.container__inner {
+  position: relative;
+  min-height: 400px; }
+.home .container__inner .btn, .accessories .container__inner .btn, .cameras .container__inner .btn {
+  position: absolute;
+  bottom: 0; }
+.soundReview .container__inner, .camerasReview .container__inner {
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
+
 main {
   padding: 0 20px; }
 main .label {
   color: #ffc7b0; }
-main .container__inner {
-  position: relative;
-  min-height: 400px; }
-main .container__inner .btn {
-  position: absolute;
-  bottom: 0; }
 main .home {
   background: url("../images/visuals/home-small.png") right top no-repeat;
   background-size: cover; }
 main .home p {
   font-size: 1.3125em; }
 main .accessories {
-  background: #7abecb url("../images/visuals/accessories.png") 33% top no-repeat;
+  background: #71b6c3 url("../images/visuals/accessories.png") 33% top no-repeat;
   background-size: cover; }
 main .camerasReview {
   background: url("../images/visuals/cameras-review.png") center center no-repeat;
