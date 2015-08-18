@@ -1,0 +1,35 @@
+.search{
+  float: right;
+
+  .search--buttonShow{
+    @include button-with-icon;
+  }
+
+  .search--form{
+    display: none;
+    @include clearfix;
+
+    &.show{
+      display: block;
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      z-index: ($hi-level+1);
+    }
+  }
+
+  .search--input{
+    width: 100%;
+    font-size: em(21);
+    font-weight: 300;
+    padding: 10px 5px;
+    color: $body-color;
+    border: 0;
+    border-bottom: 1px solid $body-color;
+    background: transparent;
+  }
+  
+  .icon--search{
+    float: right;
+  }
+}

@@ -1,0 +1,16 @@
+@mixin button-with-icon {
+  padding: 0;
+  font-size: em(13);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 32px;
+  letter-spacing: 0.15em;
+  color: $menu-color;
+  border: 0;
+  background: none;
+
+  [class^="icon-"],
+  [class*=" icon-"]{
+    vertical-align: bottom;
+  }
+}

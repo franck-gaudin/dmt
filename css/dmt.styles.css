@@ -2,6 +2,8 @@
 /* Colors */
 /* Background images */
 /* Font family */
+/* Elements size */
+/* Z-index */
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -77,6 +79,14 @@ table {
   background-color: transparent;
   color: #fff; }
 
+a, a:hover, a:active {
+  color: #ffe18f; }
+
+a {
+  text-decoration: none; }
+a:hover {
+  text-decoration: underline; }
+
 h1, h2, h3, h4 {
   line-height: 1em;
   margin-top: 0.25em;
@@ -114,6 +124,81 @@ p {
   font-weight: 400;
   opacity: .4; }
 
+.menu {
+  float: left; }
+.menu .menu--buttonShow {
+  padding: 0;
+  font-size: 0.8125em;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 32px;
+  letter-spacing: 0.15em;
+  color: #898691;
+  border: 0;
+  background: none; }
+.menu .menu--buttonShow [class^="icon-"], .menu .menu--buttonShow [class*=" icon-"] {
+  vertical-align: bottom; }
+.menu .menu--items {
+  position: fixed;
+  width: 240px;
+  height: 100%;
+  padding: 20px;
+  top: 0;
+  left: -240px;
+  z-index: 100;
+  background: #ffe18f;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+.menu .menu--items.menu--open {
+  left: 0; }
+.menu .menu--item {
+  display: block; }
+.menu .menu--item a {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 2em;
+  color: #3e3b4a; }
+
+.search {
+  float: right; }
+.search .search--buttonShow {
+  padding: 0;
+  font-size: 0.8125em;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 32px;
+  letter-spacing: 0.15em;
+  color: #898691;
+  border: 0;
+  background: none; }
+.search .search--buttonShow [class^="icon-"], .search .search--buttonShow [class*=" icon-"] {
+  vertical-align: bottom; }
+.search .search--form {
+  display: none; }
+.search .search--form::after {
+  clear: both;
+  content: "";
+  display: table; }
+.search .search--form.show {
+  display: block;
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  z-index: 101; }
+.search .search--input {
+  width: 100%;
+  font-size: 1.3125em;
+  font-weight: 300;
+  padding: 10px 5px;
+  color: #fff;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  background: transparent; }
+.search .icon--search {
+  float: right; }
+
 /**
  * A simple, design-free icon object. Extend this object with a `.icon--*` skin
  * class.
@@ -145,9 +230,65 @@ p {
   padding: 2.5em;
   margin-bottom: 2.5em; }
 
+header {
+  padding: 0 30px; }
+header .branding {
+  padding: 35px 0;
+  text-align: center; }
+
+*:focus {
+  outline: none; }
+
 body {
+  position: relative;
   color: #fff;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   line-height: 1.5em;
-  background-color: #3e3b4a; }
+  background-color: #3e3b4a;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+body .serif {
+  font-family: "Old Standard TT", serif; }
+body.push {
+  left: 240px;
+  overflow-x: hidden; }
+body.no-scroll {
+  overflow: hidden; }
+body .overlay {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: transparent;
+  z-index: -1;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+body .overlay.show {
+  opacity: 1;
+  z-index: 100;
+  background: rgba(62, 59, 74, 0.9); }
+
+.branding {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase; }
+.branding span {
+  display: block;
+  margin: 0 0.25em;
+  font-size: 0.25em;
+  font-family: "Old Standard TT", serif;
+  font-weight: 300;
+  text-transform: none;
+  color: #898691; }
+
+.navbar::after {
+  clear: both;
+  content: "";
+  display: table; }

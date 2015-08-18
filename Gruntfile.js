@@ -12,11 +12,23 @@ module.exports = function(grunt){
       ignore_warning: {
         options: {
           '-W083': true,
+          '-W120' : false,
         },
         src: [
-          'src/js/main.js'
+          'src/js/main.js',
+          'src/js/classie.js'
         ],
       },
+    },
+
+    uglify: {
+      dist: {
+        files: {
+          'js/main.min.js': [
+            'src/js/main.js'
+          ]
+        }
+      }
     },
 
     sass: {
@@ -55,7 +67,7 @@ module.exports = function(grunt){
     watch: {
       js: {
         files: ['src/js/*.js'],
-        tasks: ['jshint' ],
+        tasks: ['jshint', 'uglify' ],
         options: {
           spawn: false,
         },
@@ -75,6 +87,6 @@ module.exports = function(grunt){
   // ========= // CREATE TASKS =========
 
   // this default task will go through all configuration (dev and production) in each task 
-  grunt.registerTask('default', ['jshint', 'cssmin', 'sass', 'imagemin']);
+  grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'sass', 'imagemin']);
 
 };
