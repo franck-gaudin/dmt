@@ -1,0 +1,18 @@
+footer{
+  padding: 0 30px;
+  margin: 3em 0 1em;
+
+  .copyright,
+  .social,
+  .social li{
+    display: inline-block;
+  }
+
+  .copyright{
+    line-height: 32px;
+  }
+
+  .social{
+    float: right;
+  }
+}

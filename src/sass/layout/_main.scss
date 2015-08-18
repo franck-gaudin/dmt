@@ -1,13 +1,35 @@
 .container{
-  padding: em(40);
-  margin-bottom: em(40);
+  padding: em(20);
+  margin-bottom: em(20);
 }
 .container__inner{}
 
-header{
-  padding: 0 30px;
-  .branding{
-    padding: 35px 0;
-    text-align: center;
+main{
+  padding: 0 10px;
+
+  .label{
+    color: $label-color;
+  }
+
+  .home{
+    background: url($article-home-bg) center center no-repeat;
+    background-size: cover;
+  }
+  .accesories{
+    background: $article-accessories-bg;
+  }
+  .camerasReview{
+    background: url($article-camerasReview-bg) center center no-repeat;
+    background-size: cover;
+  }
+  .soundReview{
+    background: url($article-soundReview-bg) center center no-repeat;
+    background-size: cover;
+  }
+  .cameras{
+    background: $article-cameras-bg;
+  }
+  .newsletter{
+    background: $newsletter-bg;
   }
 }

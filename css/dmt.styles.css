@@ -55,7 +55,8 @@ table {
   -moz-transition: all 0.3s;
   transition: all 0.3s; }
 .btn:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
 
 /**
  * Positive buttons’ skin. Extends `.btn`.
@@ -234,15 +235,80 @@ p {
 .icon--search {
   background-image: url("../images/icons/icon-search.png"); }
 
-.container {
-  padding: 2.5em;
-  margin-bottom: 2.5em; }
-
 header {
   padding: 0 30px; }
 header .branding {
   padding: 35px 0;
-  text-align: center; }
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase; }
+header .branding span {
+  display: block;
+  margin: 0 0.25em;
+  font-size: 0.25em;
+  font-family: "Old Standard TT", serif;
+  font-weight: 300;
+  text-transform: none;
+  color: #898691; }
+header .navbar {
+  margin-bottom: 30px; }
+header .navbar::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+.container {
+  padding: 1.25em;
+  margin-bottom: 1.25em; }
+
+main {
+  padding: 0 10px; }
+main .label {
+  color: #ffc7b0; }
+main .home {
+  background: url("../images/") center center no-repeat;
+  background-size: cover; }
+main .accesories {
+  background: #7abecb; }
+main .camerasReview {
+  background: url("../images/") center center no-repeat;
+  background-size: cover; }
+main .soundReview {
+  background: url("../images/") center center no-repeat;
+  background-size: cover; }
+main .cameras {
+  background: #1ab467; }
+main .newsletter {
+  background: #eb7b61; }
+
+footer {
+  padding: 0 30px;
+  margin: 3em 0 1em; }
+footer .copyright, footer .social, footer .social li {
+  display: inline-block; }
+footer .copyright {
+  line-height: 32px; }
+footer .social {
+  float: right; }
+
+body {
+  position: relative;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  background-color: #3e3b4a;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+body.push {
+  left: 240px;
+  overflow-x: hidden; }
+body.no-scroll {
+  overflow: hidden; }
 
 *:focus {
   outline: none; }
@@ -267,40 +333,6 @@ header .branding {
   z-index: 100;
   background: rgba(62, 59, 74, 0.9); }
 
-body {
-  position: relative;
-  color: #fff;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  line-height: 1.5em;
-  background-color: #3e3b4a;
-  left: 0;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
-body.push {
-  left: 240px;
-  overflow-x: hidden; }
-body.no-scroll {
-  overflow: hidden; }
-
-header .branding {
-  font-size: 3em;
-  font-weight: 700;
-  line-height: 1;
-  text-transform: uppercase; }
-header .branding span {
-  display: block;
-  margin: 0 0.25em;
-  font-size: 0.25em;
-  font-family: "Old Standard TT", serif;
-  font-weight: 300;
-  text-transform: none;
-  color: #898691; }
-header .navbar::after {
-  clear: both;
-  content: "";
-  display: table; }
-
-main .label {
-  color: #ffc7b0; }
+.hidden {
+  display: none;
+  visibility: hidden; }
