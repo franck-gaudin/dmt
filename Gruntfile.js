@@ -26,6 +26,9 @@ module.exports = function(grunt){
         files: {
           'js/main.min.js': [
             'src/js/main.js'
+          ],
+          'js/loadCSS.min.js':[
+            'src/js/loadCSS.js'
           ]
         }
       }
@@ -48,7 +51,7 @@ module.exports = function(grunt){
         expand: true,
         cwd: 'css/',
         src: ['dmt.styles.css', '!*.min.css'],
-        dest: 'dist/css/',
+        dest: 'css/',
         ext: '.styles.min.css'
       }
     },
@@ -68,18 +71,20 @@ module.exports = function(grunt){
       dist: {
         options: {
           base: './',
+          css: [
+            'css/dmt.styles.min.css'
+          ],
           dimensions: [{
-            width: 1024,
-            height: 900
-          },
-            {
-              width: 500,
-              height: 900
-            }]
+            height: 200,
+            width: 500
+          }, {
+            height: 900,
+            width: 1200
+          }],
         },
-        files: [
-          {src: ['index.html'], dest: 'result.html'}
-        ]
+        src: 'index.html',
+        dest: 'result.html',
+        ignore: ['@font-face',/url\(/]
       }
     },
 
@@ -107,5 +112,7 @@ module.exports = function(grunt){
 
   // this default task will go through all configuration (dev and production) in each task 
   grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'sass', 'imagemin']);
+
+  grunt.registerTask('build', ['critical', 'cssmin', 'imagemin']);
 
 };
