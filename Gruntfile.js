@@ -51,7 +51,7 @@ module.exports = function(grunt){
         expand: true,
         cwd: 'css/',
         src: ['dmt.styles.css', '!*.min.css'],
-        dest: 'dist/css/',
+        dest: 'css/',
         ext: '.styles.min.css'
       }
     },
@@ -110,5 +110,7 @@ module.exports = function(grunt){
 
   // this default task will go through all configuration (dev and production) in each task 
   grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'sass', 'imagemin']);
+
+  grunt.registerTask('build', ['critical', 'cssmin', 'imagemin']);
 
 };
