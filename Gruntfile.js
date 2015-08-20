@@ -26,6 +26,9 @@ module.exports = function(grunt){
         files: {
           'js/main.min.js': [
             'src/js/main.js'
+          ],
+          'js/loadCSS.min.js':[
+            'src/js/loadCSS.js'
           ]
         }
       }
