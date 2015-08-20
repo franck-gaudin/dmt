@@ -295,17 +295,16 @@ header .navbar::after {
   content: "";
   display: table; }
 
-.container {
-  padding: 1.25em;
-  margin-bottom: 1.25em; }
+.home, .accessories, .camerasReview, .soundReview, .cameras {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top; }
 
-.container__inner {
-  position: relative;
-  min-height: 400px; }
 .home .container__inner .btn, .accessories .container__inner .btn, .cameras .container__inner .btn {
   position: absolute;
   bottom: 0; }
-.soundReview .container__inner, .camerasReview .container__inner {
+
+.camerasReview .container__inner, .soundReview .container__inner {
   -webkit-box-align: start;
   -moz-box-align: start;
   box-align: start;
@@ -343,29 +342,144 @@ header .navbar::after {
   -ms-flex-pack: justify; }
 
 main {
-  padding: 0 20px; }
-main .label {
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  flex-flow: row wrap; }
+
+.container {
+  padding: 1.25em;
+  margin-bottom: 1.25em;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 100%;
+  -moz-flex: 1 100%;
+  -ms-flex: 1 100%;
+  flex: 1 100%; }
+
+.container__inner {
+  position: relative;
+  min-height: 400px; }
+.container__inner .label {
   color: #ffc7b0; }
-main .home {
-  background: url("../images/visuals/home-small.png") right top no-repeat;
-  background-size: cover; }
-main .home p {
+
+/* We rely on source order for mobile-first approach
+ * in Main case:
+ * 1  home
+ * 2  accessories
+ * 3  cameras review
+ * 4  sound review
+ * 5  cameras
+ * 6  newsletter
+ */
+.home {
+  background-image: url("../images/visuals/home-small.png");
+  background-position-x: right; }
+.home p {
   font-size: 1.3125em; }
-main .accessories {
-  background: #71b6c3 url("../images/visuals/accessories.png") 33% top no-repeat;
-  background-size: cover; }
-main .camerasReview {
-  background: url("../images/visuals/cameras-review.png") center center no-repeat;
-  background-size: cover; }
-main .soundReview {
-  background: url("../images/visuals/sound-review.png") center center no-repeat;
-  background-size: cover; }
-main .cameras {
-  background: #1ab467 url("../images/visuals/cameras.png") left top no-repeat;
-  background-size: cover; }
-main .newsletter {
-  background: #eb7b61; }
-main .newsletter h2:after {
+@media (min-width: 768px) {
+  .home {
+    background: url("../images/visuals/home-medium.png") left top no-repeat;
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+    -webkit-order: 1;
+    -moz-order: 1;
+    order: 1;
+    -ms-flex-order: 1; } }
+
+.accessories {
+  background-color: #71b6c3;
+  background-image: url("../images/visuals/accessories.png");
+  background-position-x: 33%; }
+@media (min-width: 768px) {
+  .accessories {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    box-ordinal-group: 2;
+    -webkit-order: 2;
+    -moz-order: 2;
+    order: 2;
+    -ms-flex-order: 2; } }
+
+.camerasReview {
+  background-image: url("../images/visuals/cameras-review.png"); }
+@media (min-width: 768px) {
+  .camerasReview {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    box-ordinal-group: 3;
+    -webkit-order: 3;
+    -moz-order: 3;
+    order: 3;
+    -ms-flex-order: 3; }
+  .camerasReview .container__inner {
+    min-height: 300px; }
+  .camerasReview h2 {
+    font-size: 2.25em; }
+  .camerasReview .btn {
+    font-size: 1em; } }
+
+.soundReview {
+  background-image: url("../images/visuals/sound-review.png"); }
+@media (min-width: 768px) {
+  .soundReview {
+    margin-left: 20px;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-ordinal-group: 4;
+    -moz-box-ordinal-group: 4;
+    box-ordinal-group: 4;
+    -webkit-order: 4;
+    -moz-order: 4;
+    order: 4;
+    -ms-flex-order: 4; }
+  .soundReview .container__inner {
+    min-height: 300px; }
+  .soundReview h2 {
+    font-size: 2.25em; }
+  .soundReview .btn {
+    font-size: 1em; } }
+
+.cameras {
+  background-color: #1ab467;
+  background-image: url("../images/visuals/cameras.png");
+  background-position-x: left; }
+@media (min-width: 768px) {
+  .cameras {
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-ordinal-group: 6;
+    -moz-box-ordinal-group: 6;
+    box-ordinal-group: 6;
+    -webkit-order: 6;
+    -moz-order: 6;
+    order: 6;
+    -ms-flex-order: 6; } }
+
+.newsletter {
+  background-color: #eb7b61; }
+.newsletter h2:after {
   content: '...';
   display: block;
   width: 100%;
@@ -373,10 +487,33 @@ main .newsletter h2:after {
   line-height: 1em;
   letter-spacing: 0.75em;
   font-size: 0.29167em; }
-main .newsletter .information {
+.newsletter .information {
   font-size: 0.75em;
   line-height: 1.5em;
   font-family: "Open Sans", sans-serif; }
+.newsletter .container__inner {
+  min-height: auto; }
+@media (min-width: 768px) {
+  .newsletter {
+    margin-left: 20px;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-ordinal-group: 5;
+    -moz-box-ordinal-group: 5;
+    box-ordinal-group: 5;
+    -webkit-order: 5;
+    -moz-order: 5;
+    order: 5;
+    -ms-flex-order: 5; }
+  .newsletter .container__inner {
+    min-height: 300px; }
+  .newsletter h2 {
+    font-size: 2.25em; } }
 
 footer {
   padding: 0 30px;
