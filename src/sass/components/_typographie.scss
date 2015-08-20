@@ -1,7 +1,7 @@
 h1, h2, h3, h4{
   line-height: 1em;
   margin-top: 0.25em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.35em;
 }
 
 h1{
@@ -26,8 +26,8 @@ p{
   margin-bottom: 1em;
 }
 .label{
-  font-size: em(14);
-  font-weight: 800;
+  font-size: em(13);
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.25em;
 }
@@ -35,4 +35,11 @@ p{
   font-size: em(14);
   font-weight: 400;
   opacity: .4;
+}
+
+@include breakpoint(large){
+  p{
+    font-size: em(21);
+    font-weight: 300;
+  }
 }

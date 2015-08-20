@@ -12,6 +12,7 @@
 
   &:hover{
     cursor: pointer;
+    text-decoration: none;
   }
 }
 
@@ -42,5 +43,19 @@
   &:active{
     background-color: $btn-positive-bg;
     color: $btn-positive-color;
+  }
+}
+
+a,
+a:hover,
+a:active{
+  color: $btn-negative-bg;
+}
+
+a{
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: underline;
   }
 }
