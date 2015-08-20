@@ -1,5 +1,7 @@
 header{
   padding: 0 30px;
+  box-sizing: border-box;
+  @include large-screen-view;
 
   .branding{
     padding: 35px 0;

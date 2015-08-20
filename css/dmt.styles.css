@@ -219,6 +219,10 @@ input[type="button"] {
   clear: both;
   content: "";
   display: table; }
+@media (min-width: 1024px) {
+  .search .search--form {
+    max-width: 1024px;
+    margin: 0 auto; } }
 .search .search--form.show {
   display: block;
   position: absolute;
@@ -272,7 +276,12 @@ input[type="button"] {
   background-image: url("../images/icons/icon-search.png"); }
 
 header {
-  padding: 0 30px; }
+  padding: 0 30px;
+  box-sizing: border-box; }
+@media (min-width: 1024px) {
+  header {
+    max-width: 1024px;
+    margin: 0 auto; } }
 header .branding {
   padding: 35px 0;
   font-size: 3em;
@@ -343,6 +352,7 @@ header .navbar::after {
 
 main {
   padding: 0 20px;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -353,10 +363,15 @@ main {
   -webkit-flex-flow: row wrap;
   -moz-flex-flow: row wrap;
   flex-flow: row wrap; }
+@media (min-width: 1024px) {
+  main {
+    max-width: 1024px;
+    margin: 0 auto; } }
 
 .container {
   padding: 1.25em;
   margin-bottom: 1.25em;
+  box-sizing: border-box;
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   box-flex: 1;
@@ -388,6 +403,7 @@ main {
 @media (min-width: 768px) {
   .home {
     background: url("../images/visuals/home-medium.png") left top no-repeat;
+    background-size: cover;
     -webkit-box-ordinal-group: 1;
     -moz-box-ordinal-group: 1;
     box-ordinal-group: 1;
@@ -409,6 +425,15 @@ main {
     -moz-order: 2;
     order: 2;
     -ms-flex-order: 2; } }
+@media (min-width: 1024px) {
+  .accessories {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    box-flex: 0;
+    -webkit-flex: 0 589px;
+    -moz-flex: 0 589px;
+    -ms-flex: 0 589px;
+    flex: 0 589px; } }
 
 .camerasReview {
   background-image: url("../images/visuals/cameras-review.png"); }
@@ -434,6 +459,17 @@ main {
     font-size: 2.25em; }
   .camerasReview .btn {
     font-size: 1em; } }
+@media (min-width: 1024px) {
+  .camerasReview {
+    -webkit-box-ordinal-group: 4;
+    -moz-box-ordinal-group: 4;
+    box-ordinal-group: 4;
+    -webkit-order: 4;
+    -moz-order: 4;
+    order: 4;
+    -ms-flex-order: 4; }
+  .camerasReview .container__inner {
+    min-height: 400px; } }
 
 .soundReview {
   background-image: url("../images/visuals/sound-review.png"); }
@@ -460,6 +496,17 @@ main {
     font-size: 2.25em; }
   .soundReview .btn {
     font-size: 1em; } }
+@media (min-width: 1024px) {
+  .soundReview {
+    -webkit-box-ordinal-group: 5;
+    -moz-box-ordinal-group: 5;
+    box-ordinal-group: 5;
+    -webkit-order: 5;
+    -moz-order: 5;
+    order: 5;
+    -ms-flex-order: 5; }
+  .soundReview .container__inner {
+    min-height: 400px; } }
 
 .cameras {
   background-color: #1ab467;
@@ -476,6 +523,16 @@ main {
     -moz-order: 6;
     order: 6;
     -ms-flex-order: 6; } }
+@media (min-width: 1024px) {
+  .cameras {
+    -webkit-box-flex: 2;
+    -moz-box-flex: 2;
+    box-flex: 2;
+    -webkit-flex: 2;
+    -moz-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    margin-left: 20px; } }
 
 .newsletter {
   background-color: #eb7b61; }
@@ -514,10 +571,31 @@ main {
     min-height: 300px; }
   .newsletter h2 {
     font-size: 2.25em; } }
+@media (min-width: 1024px) {
+  .newsletter {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    box-flex: 0;
+    -webkit-flex: 0 375px;
+    -moz-flex: 0 375px;
+    -ms-flex: 0 375px;
+    flex: 0 375px;
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    box-ordinal-group: 3;
+    -webkit-order: 3;
+    -moz-order: 3;
+    order: 3;
+    -ms-flex-order: 3; } }
 
 footer {
   padding: 0 30px;
-  margin: 3em 0 1em; }
+  margin: 3em 0 1em;
+  box-sizing: border-box; }
+@media (min-width: 1024px) {
+  footer {
+    max-width: 1024px;
+    margin: 0 auto; } }
 footer .copyright, footer .social, footer .social li {
   display: inline-block; }
 footer .copyright {

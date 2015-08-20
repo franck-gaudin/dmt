@@ -20,13 +20,16 @@
 
 main{
   padding: 0 20px;
+  box-sizing: border-box;
   @include display(flex);
   @include flex-flow(row wrap);
+  @include large-screen-view;
 }
 
 .container{
   padding: em(20);
   margin-bottom: em(20);
+  box-sizing: border-box;
   @include flex(1 100%);
 }
 
@@ -56,15 +59,17 @@ main{
 
   p{ font-size: em(21); }
 
-  @include breakpoint(medium){
-    background: url($article-home-medium-visual) left top no-repeat;
-    @include order(1);
-  }
-
   .container__inner{
     .btn{
       @extend %btn-align-bottom;
     }
+  }
+
+  //-- Medium device
+  @include breakpoint(medium){
+    background: url($article-home-medium-visual) left top no-repeat;
+    background-size: cover;
+    @include order(1);
   }
 }
 .accessories{
@@ -79,8 +84,14 @@ main{
     }
   }
 
+  //-- Medium device
   @include breakpoint(medium){
     @include order(2);
+  }
+
+  //-- Large device
+  @include breakpoint(large){
+    @include flex(0 589px);
   }
 }
 .camerasReview{
@@ -91,6 +102,7 @@ main{
     @extend %content-space-between;
   }
 
+  //-- Medium device
   @include breakpoint(medium){
     @include flex(1);
     @include order(3);
@@ -105,6 +117,15 @@ main{
       font-size: em(16);
     }
   }
+
+  //-- Large device
+  @include breakpoint(large){
+    @include order(4);
+
+    .container__inner{
+      min-height: 400px;
+    }
+  }
 }
 .soundReview{
   background-image: url($article-soundReview-visual);
@@ -114,6 +135,7 @@ main{
     @extend %content-space-between;
   }
 
+  //-- Medium device
   @include breakpoint(medium){
     margin-left: 20px;
     @include flex(1);
@@ -129,6 +151,15 @@ main{
       font-size: em(16);
     }
   }
+
+  //-- Large device
+  @include breakpoint(large){
+    @include order(5);
+
+    .container__inner{
+      min-height: 400px;
+    }
+  }
 }
 .cameras{
   background-color: $article-cameras-bg;
@@ -142,10 +173,17 @@ main{
     }
   }
 
+  //-- Medium device
   @include breakpoint(medium){
     background-position: center center;
     background-size: cover;
     @include order(6);
+  }
+
+  //-- Large device
+  @include breakpoint(large){
+    @include flex(2);
+    margin-left: 20px;
   }
 }
 .newsletter{
@@ -170,6 +208,7 @@ main{
     min-height: auto;
   }
 
+  //-- Medium device
   @include breakpoint(medium){
     margin-left: 20px;
     @include flex(1);
@@ -181,5 +220,11 @@ main{
     h2{
       font-size: em(36);
     }
+  }
+
+  //-- Large device
+  @include breakpoint(large){
+    @include flex(0 375px);
+    @include order(3);
   }
 }

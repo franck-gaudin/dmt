@@ -15,6 +15,13 @@
   }
 }
 
+@mixin large-screen-view{
+  @include breakpoint(large){
+    max-width: $large;
+    margin: 0 auto
+  }
+}
+
 // Breakpoint
 
 $small:   320px;
