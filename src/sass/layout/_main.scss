@@ -71,6 +71,12 @@ main{
     background-size: cover;
     @include order(1);
   }
+  //-- Large device
+  @include breakpoint(large){
+    .container__inner{
+      max-width: 320px;
+    }
+  }
 }
 .accessories{
   background-color: $article-accessories-bg;
@@ -92,6 +98,10 @@ main{
   //-- Large device
   @include breakpoint(large){
     @include flex(0 589px);
+
+    .container__inner{
+      max-width: 220px;
+    }
   }
 }
 .camerasReview{
@@ -109,6 +119,8 @@ main{
 
     .container__inner{
       min-height: 300px;
+      text-align: center;
+      @include align-items(center);
     }
     h2{
       font-size: em(36);
@@ -143,6 +155,8 @@ main{
 
     .container__inner{
       min-height: 300px;
+      text-align: center;
+      @include align-items(center);
     }
     h2{
       font-size: em(36);
@@ -184,6 +198,10 @@ main{
   @include breakpoint(large){
     @include flex(2);
     margin-left: 20px;
+
+    .container__inner{
+      max-width: 220px;
+    }
   }
 }
 .newsletter{
@@ -226,5 +244,9 @@ main{
   @include breakpoint(large){
     @include flex(0 375px);
     @include order(3);
+
+    h2{
+      font-size: em(48);
+    }
   }
 }

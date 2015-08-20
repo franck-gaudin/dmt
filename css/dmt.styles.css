@@ -125,6 +125,10 @@ p {
   font-weight: 400;
   opacity: .4; }
 
+@media (min-width: 1024px) {
+  p {
+    font-size: 1.3125em;
+    font-weight: 300; } }
 input {
   margin-bottom: 1em;
   padding: 0.75em 0.5em;
@@ -411,6 +415,9 @@ main {
     -moz-order: 1;
     order: 1;
     -ms-flex-order: 1; } }
+@media (min-width: 1024px) {
+  .home .container__inner {
+    max-width: 320px; } }
 
 .accessories {
   background-color: #71b6c3;
@@ -433,7 +440,9 @@ main {
     -webkit-flex: 0 589px;
     -moz-flex: 0 589px;
     -ms-flex: 0 589px;
-    flex: 0 589px; } }
+    flex: 0 589px; }
+  .accessories .container__inner {
+    max-width: 220px; } }
 
 .camerasReview {
   background-image: url("../images/visuals/cameras-review.png"); }
@@ -454,7 +463,17 @@ main {
     order: 3;
     -ms-flex-order: 3; }
   .camerasReview .container__inner {
-    min-height: 300px; }
+    min-height: 300px;
+    text-align: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center; }
   .camerasReview h2 {
     font-size: 2.25em; }
   .camerasReview .btn {
@@ -491,7 +510,17 @@ main {
     order: 4;
     -ms-flex-order: 4; }
   .soundReview .container__inner {
-    min-height: 300px; }
+    min-height: 300px;
+    text-align: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center; }
   .soundReview h2 {
     font-size: 2.25em; }
   .soundReview .btn {
@@ -532,7 +561,9 @@ main {
     -moz-flex: 2;
     -ms-flex: 2;
     flex: 2;
-    margin-left: 20px; } }
+    margin-left: 20px; }
+  .cameras .container__inner {
+    max-width: 220px; } }
 
 .newsletter {
   background-color: #eb7b61; }
@@ -586,7 +617,9 @@ main {
     -webkit-order: 3;
     -moz-order: 3;
     order: 3;
-    -ms-flex-order: 3; } }
+    -ms-flex-order: 3; }
+  .newsletter h2 {
+    font-size: 3em; } }
 
 footer {
   padding: 0 30px;

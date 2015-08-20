@@ -36,3 +36,10 @@ p{
   font-weight: 400;
   opacity: .4;
 }
+
+@include breakpoint(large){
+  p{
+    font-size: em(21);
+    font-weight: 300;
+  }
+}
