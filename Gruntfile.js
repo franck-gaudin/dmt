@@ -64,6 +64,25 @@ module.exports = function(grunt){
       }
     },
 
+    critical: {
+      dist: {
+        options: {
+          base: './',
+          dimensions: [{
+            width: 1024,
+            height: 900
+          },
+            {
+              width: 500,
+              height: 900
+            }]
+        },
+        files: [
+          {src: ['index.html'], dest: 'result.html'}
+        ]
+      }
+    },
+
     watch: {
       js: {
         files: ['src/js/*.js'],
